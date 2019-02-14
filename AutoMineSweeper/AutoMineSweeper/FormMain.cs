@@ -179,6 +179,7 @@ namespace AutoMineSweeper
             using (Graphics graphics = Graphics.FromImage(bitmapCenter))
             {
                 graphics.CopyFromScreen(left + centerleft, top + centertop, 0, 0, new Size(centerwidth, centerheight));
+                this.pictureBox1.Image?.Dispose();
                 this.pictureBox1.Image = bitmapCenter;
             }
 
@@ -272,6 +273,7 @@ namespace AutoMineSweeper
                         graphics.DrawString(s, new Font("宋体", 12), Brushes.Black, x * RectWidth, y * RectWidth);
                     }
 
+                this.pictureBox2.Image?.Dispose();
                 this.pictureBox2.Image = bitmapDebug;
             }
             

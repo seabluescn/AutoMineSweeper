@@ -135,6 +135,7 @@ namespace MineSweeper
                 }
             }
 
+            this.picDebug.Image?.Dispose();
             this.picDebug.Image = bitmap;
             g.Dispose();
         }
@@ -200,6 +201,7 @@ namespace MineSweeper
                 this.lblMineCount.Text = (TotalMines - MineCount).ToString("D2");
             }
 
+            this.pictureBoxMain.Image?.Dispose();
             this.pictureBoxMain.Image = bitmap;
             g.Dispose();
         }
